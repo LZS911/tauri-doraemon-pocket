@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test HeaderProgress should render HeaderProgress to match snapshot 1`] = `
+<div>
+  <div
+    class="mdc-linear-progress mdc-linear-progress--indeterminate absolute top-0 z-[9999999]  mdc-linear-progress--indeterminate"
+    role="progressbar"
+  >
+    <div
+      class="mdc-linear-progress__buffer"
+      style="transform: scaleX(1);"
+    />
+    <div
+      class="mdc-linear-progress__bar mdc-linear-progress__primary-bar"
+      style="transform: scaleX(1);"
+    >
+      <span
+        class="mdc-linear-progress__bar-inner"
+      />
+    </div>
+    <div
+      class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar"
+    >
+      <span
+        class="mdc-linear-progress__bar-inner"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CollapseHeaderWrapper should match snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center"
+  >
+    <div
+      class="flex items-center justify-center rounded bg-secondary p-2 text-lg text-primary"
+    >
+      icon
+    </div>
+    <div
+      class="ml-5"
+    >
+      <p>
+        title
+      </p>
+      <p
+        class="text-xs opacity-40"
+      >
+        subTitle
+      </p>
+    </div>
+  </div>
+</div>
+`;

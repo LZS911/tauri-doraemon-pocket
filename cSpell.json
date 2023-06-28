@@ -1,0 +1,39 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "maxNumberOfProblems": 10000,
+  "dictionaries": [
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "less",
+    "powershell",
+    "dev-env",
+    "antd-ui"
+  ],
+  "flagWords": [],
+  "ignorePaths": [],
+  "words": [
+    "ahooks",
+    "wechat",
+    "weibo",
+    "IFTRUE",
+    "FITRUE",
+    "brotli",
+    "reduxjs",
+    "antd",
+    "sider",
+    "tailwindcss",
+    "Roboto",
+    "antv",
+    "testid",
+    "haibara",
+    "nestjs",
+    "hintrc",
+    "stylelintignore",
+    "stylelintrc",
+    "doraemon",
+    "tauri"
+  ]
+}

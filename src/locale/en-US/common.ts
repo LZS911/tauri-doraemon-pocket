@@ -1,0 +1,37 @@
+export default {
+  chinese: 'chinese',
+  english: 'english',
+  date: {
+    month: 'Month',
+    week: 'Week',
+    monthData: {
+      JAN: 'JAN',
+      Jan: 'Jan',
+      Feb: 'Feb',
+      Mar: 'Mar',
+      Apr: 'Apr',
+      May: 'May',
+      Jun: 'Jun',
+      Jul: 'Jul',
+      Aug: 'Aug',
+      Sep: 'Sep',
+      Oct: 'Oct',
+      Nov: 'Nov',
+      Dec: 'Dec',
+      Tue: 'Tue',
+      Wed: 'Wed',
+      Thu: 'Thu',
+      Fri: 'Fir',
+      Sat: 'Sat',
+      Sun: 'Sun',
+    },
+    weekData: {
+      Mon: 'Mon',
+    },
+  },
+  request: {
+    noticeFailTitle: 'Request Failed',
+  },
+  unknownError: 'Unknown Error ',
+  title: 'Doraemon Pocket',
+};

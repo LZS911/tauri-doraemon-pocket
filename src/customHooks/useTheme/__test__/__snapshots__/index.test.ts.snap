@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 1`] = `
+Array [
+  "#177ddc",
+  "#213752",
+]
+`;
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 2`] = `
+Array [
+  "#03934c",
+  "#3a5649",
+]
+`;
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 3`] = `
+Array [
+  "#6559c7",
+  "#424062",
+]
+`;
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 4`] = `
+Array [
+  "#1890ff",
+  "#e6f6ff",
+]
+`;
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 5`] = `
+Array [
+  "#00a854",
+  "#e3f0e7",
+]
+`;
+
+exports[`test useTheme should match snapshot for getCurrentColorSchemeStrings 6`] = `
+Array [
+  "#7265e6",
+  "#eeedfc",
+]
+`;

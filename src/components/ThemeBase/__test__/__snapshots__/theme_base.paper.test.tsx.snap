@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Paper should match snapshot 1`] = `
+<div>
+  <div
+    class="bg-white dark:bg-darkMode dark:text-white "
+  >
+    <div>
+      children
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test UserNavigation should match snapshot 1`] = `
+<div>
+  <div
+    class="hover:bg-slate-200 dark:hover:bg-slate-400 after:water-wave-hide active:after:water-wave-show bg-slate-100 px-2 py-1 text-base dark:bg-black ant-popover-open transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+    data-testid="open-popover-icon"
+  >
+    <img
+      class="h-6 w-6 rounded-[50%] bg-primary"
+      src="https://joeschmoe.io/api/v1/random"
+    />
+    <span
+      class="ml-3 font-bold"
+    />
+  </div>
+</div>
+`;

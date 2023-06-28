@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CollapseContent should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-wrap"
+  >
+    <div
+      class="mr-2 flex cursor-pointer flex-col items-center rounded px-4 py-4 pb-1 text-center transition-[background] "
+    >
+      <div
+        class="mb-1"
+      >
+        content1
+      </div>
+    </div>
+    <div
+      class="mr-2 flex cursor-pointer flex-col items-center rounded px-4 py-4 pb-1 text-center transition-[background] "
+    >
+      <div
+        class="mb-1"
+      >
+        content2
+      </div>
+    </div>
+    <div
+      class="mr-2 flex cursor-pointer flex-col items-center rounded px-4 py-4 pb-1 text-center transition-[background] "
+    >
+      <div
+        class="mb-1"
+      >
+        content3
+      </div>
+      <span
+        class="text-xs opacity-80"
+      >
+        describe
+      </span>
+    </div>
+  </div>
+</div>
+`;

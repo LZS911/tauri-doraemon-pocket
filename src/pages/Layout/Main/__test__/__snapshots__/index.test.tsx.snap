@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Main should match snapshot 1`] = `
+<div>
+  <main
+    class="min-h-[calc(100vh-50px)] overflow-auto bg-slate-100 p-6 dark:!bg-black"
+  >
+    children
+  </main>
+</div>
+`;

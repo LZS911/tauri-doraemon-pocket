@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Options should match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="ant-popover-open"
+    >
+      children
+    </div>
+  </div>
+  <div
+    style="position: absolute; top: 0px; left: 0px; width: 100%;"
+  >
+    <div>
+      <div
+        class="ant-popover dark:bg-darkMode rounded-lg theme-options test theme-popover"
+        style="opacity: 0;"
+      >
+        <div
+          class="ant-popover-content"
+        >
+          <div
+            class="ant-popover-arrow"
+          >
+            <span
+              class="ant-popover-arrow-content"
+            />
+          </div>
+          <div
+            class="ant-popover-inner"
+            role="tooltip"
+          >
+            <div
+              class="ant-popover-inner-content"
+            >
+              <div
+                class="w-48 cursor-pointer rounded-sm py-2 px-4 transition-[background] hover:bg-slate-200 dark:text-white dark:hover:bg-slate-500"
+              >
+                <span
+                  class="leading-6"
+                >
+                  text1
+                </span>
+              </div>
+              <div
+                class="w-48 cursor-pointer rounded-sm py-2 px-4 transition-[background] hover:bg-slate-200 dark:text-white dark:hover:bg-slate-500"
+              >
+                <span
+                  class="leading-6"
+                >
+                  text2
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

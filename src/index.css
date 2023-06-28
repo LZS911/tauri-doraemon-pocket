@@ -1,0 +1,79 @@
+/* IFTRUE_isDebug */
+/* FITRUE_isDebug */
+@import '@material/react-linear-progress/dist/linear-progress.css';
+@import './prefilght.css';
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  height: 100vh;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.theme-blue {
+  --color-primary: #1890ff;
+  --color-secondary: #e6f7ff;
+  --color-border: #69c0ff;
+  --mdc-theme-primary: #1890ff;
+  --mdc-theme-secondary: #e6f7ff;
+}
+
+.theme-purple {
+  --color-primary: #7265e6;
+  --color-secondary: #eeedfc;
+  --color-border: #eeedff;
+  --mdc-theme-primary: #7265e6;
+  --mdc-theme-secondary: #eeedfc;
+}
+
+.theme-green {
+  --color-primary: #00a854;
+  --color-secondary: #d1e8d99c;
+  --color-border: #3ec277;
+  --mdc-theme-primary: #00a854;
+  --mdc-theme-secondary: #d1e8d99c;
+}
+
+.dark-theme-blue {
+  --color-primary: #177ddc;
+  --color-secondary: #111d2c;
+  --color-border: #164c7e;
+  --mdc-theme-primary: #177ddc;
+  --mdc-theme-secondary: #111d2c;
+}
+
+.dark-theme-purple {
+  --color-primary: #655ac8;
+  --color-secondary: #222130;
+  --color-border: #443e78;
+  --mdc-theme-primary: #655ac8;
+  --mdc-theme-secondary: #222130;
+}
+
+.dark-theme-green {
+  --color-primary: #05934c;
+  --color-secondary: #1a2721;
+  --color-border: #115c36;
+  --mdc-theme-primary: #05934c;
+  --mdc-theme-secondary: #1a2721;
+}

@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test ThemeBase.Icon should be as expected when isHoverCls is equal false 1`] = `
+<div>
+  <div
+    class="after:water-wave-hide active:after:water-wave-show transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+  >
+    icon
+  </div>
+</div>
+`;
+
+exports[`test ThemeBase.Icon should be as expected when isWaterWaveCls is equal false 1`] = `
+<div>
+  <div
+    class="hover:bg-slate-200 dark:hover:bg-slate-400 transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+  >
+    icon
+  </div>
+</div>
+`;
+
+exports[`test ThemeBase.Icon should match snapshot 1`] = `
+<div>
+  <div
+    class="hover:bg-slate-200 dark:hover:bg-slate-400 after:water-wave-hide active:after:water-wave-show transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+  >
+    icon
+  </div>
+</div>
+`;
+
+exports[`test ThemeBase.Icon should match snapshot when badge is not empty 1`] = `
+<div>
+  <div
+    class="hover:bg-slate-200 dark:hover:bg-slate-400 after:water-wave-hide active:after:water-wave-show transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+  >
+    <span
+      class="ant-badge ant-badge-status leading-[0.875rem]"
+    >
+      <span
+        class="dark:text-white"
+      >
+        icon
+      </span>
+      <sup
+        class="ant-scroll-number ant-badge-count ant-badge-count-sm"
+        data-show="true"
+        style="margin-top: 2px; right: 0px; background: rgb(24, 144, 255);"
+        title="2"
+      >
+        <span
+          class="ant-scroll-number-only"
+          style="transition: none;"
+        >
+          <span
+            class="ant-scroll-number-only-unit current"
+          >
+            2
+          </span>
+        </span>
+      </sup>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`test ThemeBase.Icon should match snapshot when tooltip is not empty 1`] = `
+<body>
+  <div>
+    <div
+      class="hover:bg-slate-200 dark:hover:bg-slate-400 after:water-wave-hide active:after:water-wave-show transparent relative flex cursor-pointer items-center justify-center rounded-md bg-transparent p-2 transition-colors dark:text-white"
+    >
+      icon
+    </div>
+  </div>
+</body>
+`;

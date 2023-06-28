@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test router should match snapshot for registerRouter 1`] = `
+Array [
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/dashboard"
+  />,
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/chat"
+  />,
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/component/input"
+  />,
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/component/table"
+  />,
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/404"
+  />,
+]
+`;
+
+exports[`test router should match snapshot for registerRouter 2`] = `
+Array [
+  <Route
+    element={
+      <React.Suspense
+        fallback={<HeaderProgress />}
+      >
+        <UNDEFINED />
+      </React.Suspense>
+    }
+    path="/login"
+  />,
+]
+`;
