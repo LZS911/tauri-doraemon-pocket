@@ -2,9 +2,7 @@ import zhCN from './zh-CN';
 import enUS from './en-US';
 import * as i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LocalStorageWrapper from '../utils/LocalStorageWrapper';
 import { Dictionary, TemplateKeyPath } from '../typing/common.type';
-import CONSTANT from '../common/constant';
 
 export type I18nKey = TemplateKeyPath<typeof zhCN.translation>;
 
@@ -18,10 +16,7 @@ i18n.use(initReactI18next).init({
     [SupportLanguage.zhCN]: zhCN,
     [SupportLanguage.enUS]: enUS,
   },
-  lng: LocalStorageWrapper.getOrDefault(
-    CONSTANT.LANGUAGE_STORAGE_KEY,
-    SupportLanguage.zhCN
-  ),
+  lng: SupportLanguage.zhCN,
   fallbackLng: SupportLanguage.zhCN,
   interpolation: {
     escapeValue: false,

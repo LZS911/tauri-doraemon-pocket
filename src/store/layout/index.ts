@@ -6,7 +6,7 @@ export interface ILayoutState {
   isDrawerSider: boolean;
 }
 export const layoutInitialState: ILayoutState = {
-  isExpandSider: false,
+  isExpandSider: true,
   siderWidth: CONSTANT.SIDER_WIDTH,
   isDrawerSider: false,
 };

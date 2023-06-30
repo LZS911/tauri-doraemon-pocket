@@ -2,7 +2,7 @@ import { act, render } from '@testing-library/react';
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import useResizeObserver from 'use-resize-observer';
-import { userConfigInitialState } from '../../store/userConfig';
+import { userConfigInitialState } from '../../store/config';
 import RouterComponent from '../index';
 
 jest.mock('react-redux', () => {

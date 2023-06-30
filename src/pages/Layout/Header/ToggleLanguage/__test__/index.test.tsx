@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { SupportLanguage } from '../../../../../locale';
 import { layoutInitialState } from '../../../../../store/layout';
-import { userConfigInitialState } from '../../../../../store/userConfig';
+import { userConfigInitialState } from '../../../../../store/config';
 import ToggleLanguage from '../index';
 
 jest.mock('react-redux', () => {

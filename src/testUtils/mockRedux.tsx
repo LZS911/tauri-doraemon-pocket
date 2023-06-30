@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import layout from '../store/layout';
-import userConfig from '../store/userConfig';
+import config from '../store/config';
 import { Dictionary } from '../typing/common.type';
 import { Provider } from 'react-redux';
 import React, { ReactNode } from 'react';
 const reducers = combineReducers({
   layout,
-  userConfig,
+  config,
 });
 export const storeFactory: any = (initStore: Dictionary = {}) => {
   return configureStore({

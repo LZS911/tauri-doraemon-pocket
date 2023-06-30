@@ -1,7 +1,7 @@
 import { waitFor } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { layoutInitialState } from '../../../../store/layout';
-import { userConfigInitialState } from '../../../../store/userConfig';
+import { userConfigInitialState } from '../../../../store/config';
 import { renderWithRouter } from '../../../../testUtils/customRender';
 import Sider from '../index';
 

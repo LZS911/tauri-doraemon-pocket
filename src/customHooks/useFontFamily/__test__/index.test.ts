@@ -1,8 +1,6 @@
 import { act, renderHook } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
-import CONSTANT from '../../../common/constant';
 import { FontFamilyEnum } from '../../../common/enum';
-import LocalStorageWrapper from '../../../utils/LocalStorageWrapper';
 import { useInitFontFamily, useFontFamily } from '../index';
 
 jest.mock('react-redux', () => {
@@ -84,19 +82,5 @@ describe('test useInitFontFamily and useFontFamily', () => {
       payload: FontFamilyEnum.Default,
     });
     expect(document.body.classList.length).toBe(0);
-  });
-
-  test('should initial font family when local is not default', () => {
-    LocalStorageWrapper.set(CONSTANT.FONT_FAMILY, FontFamilyEnum.Inter);
-    renderHook(() => useInitFontFamily());
-    expect(dispatchMock).toBeCalledTimes(1);
-    expect(dispatchMock).toBeCalledWith({
-      type: 'userConfig/setFontFamily',
-      payload: FontFamilyEnum.Inter,
-    });
-    expect(document.body.classList.contains(`font-${FontFamilyEnum.Inter}`))
-      .toBeTruthy;
-
-    LocalStorageWrapper.set(CONSTANT.FONT_FAMILY, FontFamilyEnum.Default);
   });
 });

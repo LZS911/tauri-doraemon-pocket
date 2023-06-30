@@ -2091,7 +2091,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@tauri-apps/api@^1.4.0":
+"@tauri-apps/api@^1.2.0", "@tauri-apps/api@^1.4.0":
   version "1.4.0"
   resolved "https://registry.npmmirror.com/@tauri-apps/api/-/api-1.4.0.tgz#b4013ca3d17b853f7df29fe14079ebb4d52dbffa"
   integrity sha512-Jd6HPoTM1PZSFIzq7FB8VmMu3qSSyo/3lSwLpoapW+lQ41CL5Dow2KryLg+gyazA/58DRWI9vu/XpEeHK4uMdw==
@@ -9615,6 +9615,12 @@ tailwindcss@^3.3.2:
     postcss-value-parser "^4.2.0"
     resolve "^1.22.2"
     sucrase "^3.32.0"
+
+"tauri-plugin-log-api@https://github.com/tauri-apps/tauri-plugin-log#v1":
+  version "0.0.0"
+  resolved "https://github.com/tauri-apps/tauri-plugin-log#21921031d74f871180381317a338559f588ad8e9"
+  dependencies:
+    "@tauri-apps/api" "^1.2.0"
 
 test-exclude@^6.0.0:
   version "6.0.0"

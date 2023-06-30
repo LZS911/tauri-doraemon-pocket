@@ -36,10 +36,12 @@ const FilePath: React.FC<FilePathProps> = ({
   return (
     <Space className="text-xs">
       <Typography.Text>{label}</Typography.Text>
-      <Typography.Link className={cls(className, 'text-xs')}>
-        <a onClick={() => open(filePath)} title={filePath}>
-          {content ? content : filePath}
-        </a>
+      <Typography.Link
+        title={filePath}
+        className={cls(className, 'text-xs')}
+        onClick={() => open(filePath)}
+      >
+        {content ? content : filePath}
       </Typography.Link>
     </Space>
   );

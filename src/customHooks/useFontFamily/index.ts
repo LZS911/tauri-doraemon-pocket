@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import CONSTANT from '../../common/constant';
 import { FontFamilyEnum } from '../../common/enum';
 import { IReduxState } from '../../store';
-import { setFontFamily } from '../../store/userConfig';
-import LocalStorageWrapper from '../../utils/LocalStorageWrapper';
+import { setFontFamily } from '../../store/config';
 
 const addClass = (className: string) => {
   if (document.body.classList.contains(className)) {
@@ -37,10 +36,7 @@ export const useInitFontFamily = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const fontFamily = LocalStorageWrapper.getOrDefault(
-      CONSTANT.FONT_FAMILY,
-      FontFamilyEnum.Default
-    );
+    const fontFamily = FontFamilyEnum.Default;
     dispatch(setFontFamily(fontFamily));
     if (fontFamily === FontFamilyEnum.Default) {
       removeClass();

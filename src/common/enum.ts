@@ -1,6 +1,7 @@
 export enum ThemeModeEnum {
   'Dark' = 'dark',
   'Light' = 'light',
+  'System' = 'system',
 }
 export enum ColorSchemeEnum {
   'Blue' = 'theme-blue',
@@ -21,6 +22,11 @@ export enum FontFamilyEnum {
   Serif = 'serif',
   Mono = 'mono',
   PublicSans = 'publicSans',
+}
+
+export enum AutoUpdateEnum {
+  Prompt = 'Prompt',
+  Silent = 'Silent',
 }
 
 export enum ResponseCode {

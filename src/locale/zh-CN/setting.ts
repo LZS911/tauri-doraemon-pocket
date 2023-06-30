@@ -1,0 +1,28 @@
+export default {
+  title: {
+    general: '通用',
+    generateApi: 'Api 生成',
+  },
+  generalForm: {
+    stayOnTop: '窗体置顶',
+    titlebar: '标题栏',
+    theme: '主题',
+    light: '亮色',
+    dark: '暗色',
+    colorTheme: '主题色',
+    blue: '蓝色',
+    purple: '紫色',
+    green: '绿色',
+    language: '语言',
+    zhCN: '中文',
+    enUS: '英文',
+    autoUpdate: '自动更新',
+    autoUpdatePolicy: '自动更新策略',
+    prompt: '提示',
+    promptToInstall: '提示安装',
+    silentToInstall: '静默安装',
+  },
+  submit: '提交',
+  reset: '重置为默认值',
+  resetConfirmTips: '是否将配置文件重置为默认值?',
+};

@@ -6,7 +6,7 @@ import {
   ThemeModeEnum,
 } from '../../../../../common/enum';
 import { layoutInitialState } from '../../../../../store/layout';
-import { userConfigInitialState } from '../../../../../store/userConfig';
+import { userConfigInitialState } from '../../../../../store/config';
 import { renderWithRedux } from '../../../../../testUtils/customRender';
 import Customization from '../index';
 

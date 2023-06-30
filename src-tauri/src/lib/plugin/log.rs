@@ -3,9 +3,9 @@ use tauri_plugin_log::{
     LogTarget,
 };
 
-use super::path::app_root;
+use crate::lib::path::app_root;
 
-pub fn init() {
+pub fn init() -> tauri_plugin_log::Builder {
     let mut log = tauri_plugin_log::Builder::default()
         .targets([
             LogTarget::Folder(app_root()),
@@ -23,4 +23,5 @@ pub fn init() {
             trace: Color::Cyan,
         });
     }
+    log
 }

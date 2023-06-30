@@ -1,6 +1,5 @@
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import CONSTANT from '../../common/constant';
 import {
   DarkColorSchemeEnum,
   ThemeModeEnum,
@@ -10,10 +9,22 @@ import { IReduxState } from '../../store';
 import {
   setCurrentThemeMode as _setCurrentThemeMode,
   setCurrentColorScheme as _setCurrentColorScheme,
-} from '../../store/userConfig';
+} from '../../store/config';
 import { IColorSchemeKey } from '../../typing/common.type';
-import LocalStorageWrapper from '../../utils/LocalStorageWrapper';
 import { baseTypeMatch } from 'rust-like-match';
+import { invoke } from '@tauri-apps/api';
+
+const parseTheme = (theme: string) => {
+  if (theme.toLocaleLowerCase() === 'dark') {
+    return ThemeModeEnum.Dark;
+  }
+
+  if (theme.toLocaleLowerCase() === 'light') {
+    return ThemeModeEnum.Light;
+  }
+
+  return ThemeModeEnum.System;
+};
 
 const addClass = (className: string) => {
   if (document.documentElement.classList.contains(className)) {
@@ -97,26 +108,24 @@ export const getCurrentColorSchemeStrings = (
 export const useInitTheme = () => {
   const dispatch = useDispatch();
   useEffect(() => {
+    const getTheme = async () => {
+      invoke<string>('get_theme').then((res) => {
+        dispatch(_setCurrentThemeMode(parseTheme(res)));
+        if (parseTheme(res) === ThemeModeEnum.Dark) {
+          _setDark();
+        }
+      });
+
+      invoke<ColorSchemeEnum>('get_color_schema').then((res) => {
+        dispatch(_setCurrentColorScheme(res));
+      });
+    };
     const _setDark = () => {
       addClass(ThemeModeEnum.Dark);
       themePrimaryToDark();
-      LocalStorageWrapper.set(CONSTANT.THEME_MODE, ThemeModeEnum.Dark);
-      dispatch(_setCurrentThemeMode(ThemeModeEnum.Dark));
     };
 
-    const isDark =
-      LocalStorageWrapper.getOrDefault<ThemeModeEnum>(
-        CONSTANT.THEME_MODE,
-        ThemeModeEnum.Light
-      ) === ThemeModeEnum.Dark;
-    const colorSchemeLocal = LocalStorageWrapper.getOrDefault<
-      ColorSchemeEnum | DarkColorSchemeEnum
-    >(CONSTANT.COLOR_SCHEME, ColorSchemeEnum.Blue);
-    addClass(colorSchemeLocal);
-
-    if (isDark) {
-      _setDark();
-    }
+    getTheme();
   }, [dispatch]);
 };
 

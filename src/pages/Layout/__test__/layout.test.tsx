@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import useResizeObserver from 'use-resize-observer';
-import { userConfigInitialState } from '../../../store/userConfig';
+import { userConfigInitialState } from '../../../store/config';
 import { layoutInitialState } from '../../../store/layout';
 import { renderWithRouter } from '../../../testUtils/customRender';
 import Layout from '../index';

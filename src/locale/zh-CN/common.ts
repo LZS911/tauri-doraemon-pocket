@@ -34,4 +34,7 @@ export default {
   },
   unknownError: '未知错误',
   title: 'Doraemon Pocket',
+  yes: '确认',
+  no: '取消',
+  apply: '应用',
 };

@@ -34,4 +34,7 @@ export default {
   },
   unknownError: 'Unknown Error ',
   title: 'Doraemon Pocket',
+  yes: 'Yes',
+  no: 'No',
+  apply: 'Apply',
 };

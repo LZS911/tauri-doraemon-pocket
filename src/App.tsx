@@ -4,9 +4,9 @@ import useTheme, {
   getCurrentColorSchemeStrings,
   useInitTheme,
 } from './customHooks/useTheme';
-import { useInitFontFamily } from './customHooks/useFontFamily';
 import { BrowserRouter } from 'react-router-dom';
 import 'antd/dist/reset.css';
+import { useInitLanguage } from './customHooks/useLanguage';
 
 function App() {
   const { isDark, currentColorScheme } = useTheme();
@@ -15,10 +15,9 @@ function App() {
     currentColorScheme
   );
 
-  console.log(currentColorScheme, primaryColor, isDark);
-
   useInitTheme();
-  useInitFontFamily();
+  useInitLanguage();
+  // useInitFontFamily(); todo
 
   return (
     <BrowserRouter>
