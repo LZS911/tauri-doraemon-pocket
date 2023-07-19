@@ -2,7 +2,7 @@
   "name": "Scripts",
   "author": "liyu",
   "description": "Desktop Application Core Extension Scripts.",
-  "url": "https://github.com/LZS911/tauri-doraemon-pocket/tree/main/scripts",
+  "url": "https://github.com/LZS911/tauri-doraemon-pocket/tree/master/scripts",
   "scripts": [
     {
       "name": "gen_api.js",
