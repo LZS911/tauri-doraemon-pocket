@@ -30,6 +30,17 @@ export enum AutoUpdateEnum {
 }
 
 export enum ResponseCode {
-  SUCCEEDED,
-  FAILED,
+  SUCCEEDED = 'SUCCEEDED',
+  FAILED = 'FAILED',
+}
+
+export type ResponseType = {
+  code: ResponseCode;
+  message: string;
+  data: any;
+};
+
+export enum RepositoryKind {
+  GitHub = 'github',
+  GitLab = 'gitlab',
 }

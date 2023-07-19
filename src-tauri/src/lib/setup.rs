@@ -13,10 +13,9 @@ pub fn init(app: &mut App) -> Result<(), Box<dyn std::error::Error>> {
         app.set_activation_policy(tauri::ActivationPolicy::Accessory);
     }
 
-    // let window = app.get_window("")
     let window = app.get_window("main").unwrap();
 
-    window.set_always_on_top(app_conf.stay_on_top);
+    window.set_always_on_top(app_conf.stay_on_top).unwrap();
 
     Ok(())
 }

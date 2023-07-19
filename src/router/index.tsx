@@ -14,4 +14,5 @@ export type RouterConfigItem = RouteObject & {
   key: string;
   children?: RouterConfigItem[];
   menuType?: MenuType;
+  hideChildrenInSliderMenu?: boolean;
 };

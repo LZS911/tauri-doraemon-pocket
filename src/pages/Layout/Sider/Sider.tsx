@@ -32,9 +32,9 @@ const Sider: React.FC = () => {
   };
   return (
     <nav
-      className="sticky top-0 flex min-h-full flex-col items-center justify-center overflow-y-auto pb-3 pl-1 transition-[width]"
+      className="sticky top-0 flex min-h-full flex-col items-center justify-center overflow-y-auto pb-3 transition-[width]"
       style={{
-        width: siderWidth,
+        minWidth: siderWidth,
       }}
     >
       {isDrawerSider ? (

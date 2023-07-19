@@ -7,7 +7,7 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
     <ThemeBase.Paper className="flex min-h-full w-full">
       <Sider />
-      <div className="flex-auto transition-[width]">
+      <div className="flex-auto overflow-scroll transition-[width]">
         <Main>{children}</Main>
       </div>
     </ThemeBase.Paper>

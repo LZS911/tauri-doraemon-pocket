@@ -3,6 +3,6 @@ export const FormLayout = {
     md: { span: 5 },
   },
   wrapperCol: {
-    md: { span: 10, offset: 1 },
+    md: { span: 12, offset: 1 },
   },
 };

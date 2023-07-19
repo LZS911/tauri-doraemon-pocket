@@ -25,4 +25,14 @@ export default {
   submit: '提交',
   reset: '重置为默认值',
   resetConfirmTips: '是否将配置文件重置为默认值?',
+  generateForm: {
+    output: '输出路径',
+    outputPlaceholder: '默认的 API 文件生成路径',
+    swaggerPath: 'Swagger目录',
+    swaggerPlaceholder: '默认的 Swagger.json 文件生成路径',
+    addProject: '添加项目',
+    projectName: '项目名称',
+    projectID: '项目ID',
+  },
+  pageDesc: '设置页面允许用户配置通用设置和功能设置。',
 };

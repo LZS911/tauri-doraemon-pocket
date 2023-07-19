@@ -21,7 +21,7 @@ log = "0.4.18"
 anyhow = "1.0.66"
 dark-light = "1.0.0"
 tauri-plugin-log = { git = "https://github.com/LZS911/plugins-workspace", branch = "v1", features = ["colored"] }
-
+reqwest = "0.11.13"
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
 # DO NOT REMOVE!!

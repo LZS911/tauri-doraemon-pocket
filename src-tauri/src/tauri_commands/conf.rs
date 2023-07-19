@@ -1,6 +1,9 @@
 use tauri::AppHandle;
 
-use crate::lib::conf::{AppConf, APP_CONF_PATH};
+use crate::lib::{
+    conf::{AppConf, ProjectConf, APP_CONF_PATH},
+    utils::{Response, ResponseCode},
+};
 
 #[tauri::command]
 pub fn get_app_conf() -> AppConf {
@@ -33,6 +36,36 @@ pub fn get_lang() -> String {
 }
 
 #[tauri::command]
-pub fn get_platform() -> String {
-    AppConf::get_platform()
+pub fn get_project_conf() -> Vec<ProjectConf> {
+    AppConf::get_project_conf()
+}
+
+#[tauri::command]
+pub fn add_project_conf(data: serde_json::Value) -> Response {
+    AppConf::read().insert_project(data).write();
+    Response {
+        code: ResponseCode::SUCCEEDED,
+        message: "add succeeded".into(),
+        data: "".into(),
+    }
+}
+
+#[tauri::command]
+pub fn edit_project_conf(data: serde_json::Value) -> Response {
+    AppConf::read().update_project(data).write();
+    Response {
+        code: ResponseCode::SUCCEEDED,
+        message: "edit succeeded".into(),
+        data: "".into(),
+    }
+}
+
+#[tauri::command]
+pub fn delete_project_conf(data: String) -> Response {
+    AppConf::read().delete_project(data).write();
+    Response {
+        code: ResponseCode::SUCCEEDED,
+        message: "delete succeeded".into(),
+        data: "".into(),
+    }
 }

@@ -224,7 +224,6 @@ pub fn menu_handler(event: WindowMenuEvent<tauri::Wry>) {
         "zoom_in" => win.eval("window.__zoomIn && window.__zoomIn()").unwrap(),
         "reload" => win.eval("window.location.reload()").unwrap(),
         "go_back" => win.eval("window.history.go(-1)").unwrap(),
-
         _ => (),
     }
 }

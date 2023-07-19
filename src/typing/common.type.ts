@@ -19,7 +19,10 @@ export interface IColorSchemeKey {
   darkSecondary: string;
 }
 
-export type TableColumn<RecordType = unknown, OtherColumnKes = ''> = Array<
+export type TableColumn<
+  RecordType = unknown,
+  OtherColumnKes = 'operator'
+> = Array<
   (ColumnGroupType<RecordType> | ColumnType<RecordType>) & {
     dataIndex: keyof RecordType | OtherColumnKes;
   }

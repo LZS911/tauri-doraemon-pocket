@@ -11,7 +11,7 @@ export const genNavIconList: (
     if (v.menuType === 'Hidden') {
       return null;
     }
-    if (!v.children) {
+    if (!v.children || v.hideChildrenInSliderMenu) {
       return {
         name: v.key,
         title: v.label as I18nKey,

@@ -1,5 +1,7 @@
 export default {
   title: {
-    setting: 'setting',
+    setting: 'Setting',
+    apiGenerator: 'API Generate',
+    projects: 'Project Manage',
   },
 };

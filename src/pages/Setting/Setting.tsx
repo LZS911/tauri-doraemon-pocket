@@ -1,15 +1,20 @@
-import { dialog, invoke } from '@tauri-apps/api';
+import { invoke } from '@tauri-apps/api';
 import { Button, Form, Popconfirm, Space, Tabs, TabsProps } from 'antd';
 import { useCallback, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SettingFormFields } from '.';
 import { FormLayout } from '../../common/data';
 import FilePath from '../../components/FilePath';
+import PageHeader from '../../components/PageHeader';
 import useLanguage from '../../customHooks/useLanguage';
 import useTheme from '../../customHooks/useTheme';
 import { AppConfType } from '../../typing/invoke.type';
 import { APP_CONF_PATH } from '../../utils/path';
 import GeneralForm from './GeneralForm';
+import GenerateForm from './GenerateForm';
+
+console.log((window as any).generate_api);
+
 const Setting: React.FC = () => {
   const { t } = useTranslation();
   const [form] = Form.useForm<SettingFormFields>();
@@ -25,7 +30,7 @@ const Setting: React.FC = () => {
       {
         key: 'genApi',
         label: t('setting.title.generateApi'),
-        children: <>div</>,
+        children: <GenerateForm />,
       },
     ];
     return e;
@@ -47,8 +52,12 @@ const Setting: React.FC = () => {
       color_schema: values.themeColorScheme,
       lang: values.language,
       auto_update: values.autoUpdate,
+      swagger_path: values.defaultSwaggerPath,
+      projects: values.projects ?? [],
     };
-    await invoke('form_confirm', { data: params });
+    await invoke('form_confirm', {
+      data: params,
+    });
     changeColorScheme(values.themeColorScheme);
     changeThemeMode(values.theme);
     changeLanguage(values.language);
@@ -61,6 +70,7 @@ const Setting: React.FC = () => {
         themeColorScheme: conf.color_schema,
         language: conf.lang,
         autoUpdate: conf.auto_update,
+        defaultSwaggerPath: conf.swagger_path,
       });
     },
     [form]
@@ -68,23 +78,23 @@ const Setting: React.FC = () => {
   const getConf = useCallback(() => {
     invoke<AppConfType>('get_app_conf')
       .then((conf) => {
-        console.log(conf);
         setConf(conf);
       })
       .catch((err) => {
         console.error(err);
       });
   }, [setConf]);
-
   useEffect(() => {
     getConf();
-    invoke('get_platform').then((res) => {
-      console.log(res);
-    });
   }, [getConf]);
   return (
     <section>
-      <FilePath paths={APP_CONF_PATH} />
+      <PageHeader
+        title={t('router.title.setting')}
+        desc={t('setting.pageDesc')}
+      >
+        <FilePath paths={APP_CONF_PATH} />
+      </PageHeader>
 
       <Form<SettingFormFields> form={form} {...FormLayout} onFinish={onApply}>
         <Tabs items={tabItems} />

@@ -1,4 +1,3 @@
-pub mod api_generator;
 pub mod conf;
 pub mod menu;
 pub mod path;

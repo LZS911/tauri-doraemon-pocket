@@ -35,7 +35,7 @@ const FilePath: React.FC<FilePathProps> = ({
   }, [url, paths]);
   return (
     <Space className="text-xs">
-      <Typography.Text>{label}</Typography.Text>
+      <Typography.Text type="secondary">{label}</Typography.Text>
       <Typography.Link
         title={filePath}
         className={cls(className, 'text-xs')}

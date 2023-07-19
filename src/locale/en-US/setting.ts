@@ -26,4 +26,15 @@ export default {
   reset: 'Reset to defaults',
   resetConfirmTips:
     'Are you sure you want to reset the configuration file  to the default?',
+  generateForm: {
+    output: 'Output Path',
+    outputPlaceholder: 'The default path for storing generated API files',
+    swaggerPath: 'Swagger Path',
+    swaggerPlaceholder: 'The default path for generating Swagger.json files.',
+    addProject: 'Add Project',
+    projectName: 'Project Name',
+    projectID: 'Project ID',
+  },
+  pageDesc:
+    'The settings page enables users to configure general and feature-specific settings.',
 };

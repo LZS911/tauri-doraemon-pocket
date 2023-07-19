@@ -68,3 +68,8 @@ pub fn open_file(path: PathBuf) {
     #[cfg(target_os = "linux")]
     Command::new("xdg-open").arg(pathname).spawn().unwrap();
 }
+
+pub fn load_script(filename: &str) -> String {
+    let script_file = app_root().join("scripts").join(filename);
+    fs::read_to_string(script_file).unwrap_or_else(|_| "".to_string())
+}

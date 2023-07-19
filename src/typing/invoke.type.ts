@@ -1,25 +1,29 @@
-import { AutoUpdateEnum, ColorSchemeEnum, ThemeModeEnum } from '../common/enum';
+import {
+  AutoUpdateEnum,
+  ColorSchemeEnum,
+  RepositoryKind,
+  ThemeModeEnum,
+} from '../common/enum';
 import { SupportLanguage } from '../locale';
 
-export type AppConfType = {
-  // titlebar: boolean;
-  // hide_dock_icon: boolean;
-  // stay_on_top: boolean;
+export type ProjectConf = {
+  name: string;
+  id: string;
+  token: string;
+  category: RepositoryKind;
+  path: string;
+  gitlab_url: string;
+  gitlab_token: string;
+};
 
+export type AppConfType = {
   theme: ThemeModeEnum;
   color_schema: ColorSchemeEnum;
   lang: SupportLanguage;
 
   auto_update: AutoUpdateEnum;
 
-  // Main Window
-  // isinit: boolean;
-  // popup_search: boolean;
-  // main_close: boolean;
-  // main_dashboard: boolean;
-  // main_width: number;
-  // main_height: number;
+  swagger_path: string;
 
-  // //app conf
-  // show_welcome: boolean;
+  projects: ProjectConf[];
 };

@@ -13,7 +13,7 @@ const menuItems = (): MenuProps['items'] => {
     if (v.menuType === 'Hidden') {
       return null;
     }
-    if (v.children && v.label) {
+    if (v.children && v.label && !v.hideChildrenInSliderMenu) {
       return {
         key: v.path as string,
         icon: v.icon ?? <QuestionOutlined />,
